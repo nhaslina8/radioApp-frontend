@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+/* General Body Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Headings */
+h2, h3 {
+  color: #1a237e;
+  border-bottom: 2px solid #3949ab;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Grid Layout for main sections */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.section {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Input and Buttons */
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.upload-btn, button {
+  background-color: #3949ab;
   color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.upload-btn:hover, button:hover {
+  background-color: #1a237e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-btn {
+  background-color: #d32f2f;
 }
+
+.delete-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Music List */
+.music-list {
+  list-style: none;
+  padding: 0;
+}
+
+.music-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.music-list li:last-child {
+  border-bottom: none;
+}
+
+.music-list .play-btn {
+  flex-grow: 1;
+  text-align: left;
+  background-color: transparent;
+  color: #3949ab;
+  padding: 0;
+}
+
+.music-list .play-btn:hover {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+/* Scheduler */
+.scheduler-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.scheduler-controls select, .scheduler-controls input[type="datetime-local"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+}
+
+/* Player */
+.player-container {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e8eaf6;
+  border-radius: 8px;
+}
+
+.seek-bar, .volume-slider {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Status Messages */
+.upload-status {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+progress {
+  width: 100%;
+  margin-top: 5px;
+}
+
+#radioPlayer {
+  border-radius: 8px;
+}
+.container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.upload-btn {
+  margin-top: 10px;
+  padding: 10px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.music-list {
+  list-style: none;
+  padding: 0;
+}
+
+.music-list li {
+  margin: 10px 0;
+}
+
+.play-btn {
+  padding: 8px;
+  background: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn {
+  margin-left: 10px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.player-container {
+  margin-top: 20px;
+}
+
+.seek-bar, .volume-slider {
+  width: 80%;
+  margin: 10px 0;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
